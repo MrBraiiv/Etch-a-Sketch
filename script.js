@@ -16,8 +16,8 @@
 //   }
 // }
 
-const sketch = Array(16 * 16).fill(document.createElement("div"));
 const container = document.querySelector(".container");
-for (i = 0; i < 16 * 16; i++) {
-  container.appendChild(sketch[i]);
+for (let i = 1; i < 16 * 16; i++) {
+  const sketch = document.createElement("div");
+  container.appendChild(sketch);
 }
