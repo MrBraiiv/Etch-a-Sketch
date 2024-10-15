@@ -14,6 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #1e1e1e;
 }
 
 .container {
@@ -22,12 +23,11 @@ body {
 
   width: 896px;
   min-height: 896px;
-  border: 3px black solid;
+  border: 1px white solid;
 }
 
 .container > * {
   flex: 1 1 56px;
-  /* width: 56px; */
   height: 56px;
-  border: 2px black solid;
+  border: 1px white solid;
 }
