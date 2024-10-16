@@ -14,6 +14,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
   background-color: #1e1e1e;
 }
 
@@ -22,13 +24,14 @@ body {
   flex-flow: row wrap;
 
   width: 896px;
-  min-height: 896px;
+  height: 896px;
+  /* max-height: 896px; */
   border: 1px white solid;
 }
 
 .container > * {
-  flex: 1 1 56px;
-  height: 56px;
+  /* flex: 1 1 56px;
+  height: 56px; */
   border: 1px white solid;
 }
 
@@ -42,4 +45,8 @@ body {
   width: 1px;
   height: 1px;
   border-radius: 50%;
+}
+
+.resetGrid {
+  order: -1;
 }
