@@ -31,3 +31,15 @@ body {
   height: 56px;
   border: 1px white solid;
 }
+
+.fired-square {
+  background-color: white;
+}
+
+.dot {
+  position: absolute;
+  border: 10px solid gold;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+}
