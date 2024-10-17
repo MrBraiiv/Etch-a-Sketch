@@ -1,5 +1,5 @@
 function createGrid(numOfSquaresPerSide) {
-  let sqaureSize = 896 / numOfSquaresPerSide;
+  let sqaureSize = Math.floor(896 / numOfSquaresPerSide);
   let container = document.querySelector(".container");
   for (let i = 0; i < numOfSquaresPerSide ** 2; i++) {
     const square = document.createElement("div");
