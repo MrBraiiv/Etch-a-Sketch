@@ -13,9 +13,10 @@ body {
 body {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: row;
+  justify-content: space-evenly;
+  flex-direction: column;
 
+  /* background-color: hsl(300, 90%, 30%); */
   background-color: #1e1e1e;
 }
 
@@ -23,15 +24,14 @@ body {
   display: flex;
   flex-flow: row wrap;
 
-  width: 896px;
+  min-width: 896px;
+  max-width: 900px;
   max-height: 896px;
-  /* max-height: 896px; */
+  max-height: 900px;
   border: 1px white solid;
 }
 
 .container > * {
-  /* flex: 1 1 56px;
-  height: 56px; */
   border: 1px white solid;
 }
 
@@ -41,7 +41,7 @@ body {
 
 .dot {
   position: absolute;
-  border: 10px solid gold;
+  border: 6px solid gold;
   width: 1px;
   height: 1px;
   border-radius: 50%;
@@ -49,4 +49,11 @@ body {
 
 .resetGrid {
   order: -1;
+  /* margin-bottom: 10px; */
+  width: 150px;
+  height: 150px;
+  font-size: 25px;
+  font-weight: bolder;
+  border: outset;
+  border-radius: 50%;
 }

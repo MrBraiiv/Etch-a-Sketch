@@ -1,5 +1,5 @@
 function createGrid(numOfSquaresPerSide) {
-  let sqaureSize = Math.floor(896 / numOfSquaresPerSide);
+  let squareSize = 896 / numOfSquaresPerSide;
   let container = document.querySelector(".container");
   for (let i = 0; i < numOfSquaresPerSide ** 2; i++) {
     const square = document.createElement("div");
@@ -8,12 +8,12 @@ function createGrid(numOfSquaresPerSide) {
   const allSquares = document.querySelectorAll(".container > *");
   allSquares.forEach(
     (square) =>
-      (square.style.cssText = `flex: 1 1 ${sqaureSize}px; height: ${sqaureSize}px;`)
+      (square.style.cssText = `width: ${squareSize}px; flex-grow: 1; flex-shrink: 0; height: ${squareSize}px;`)
   );
 
   const resetGrid = document.createElement("button");
   resetGrid.classList.add("resetGrid");
-  resetGrid.textContent = "Reset Grid";
+  resetGrid.textContent = "Reset";
   document.body.appendChild(resetGrid);
   resetGrid.addEventListener("click", () => {
     container.textContent = "";
@@ -25,8 +25,11 @@ function createGrid(numOfSquaresPerSide) {
         if (num <= 100 && num > 1) {
           createGrid(num);
           break;
-        } else {
-          alert("x is not valid, try values that are less than 40");
+        } else if (num > 100) {
+          alert("x is not valid, try values that are less than 100");
+          continue;
+        } else if (num < 0) {
+          alert("x is not valid, negative values doesn't work");
           continue;
         }
       }
