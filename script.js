@@ -37,7 +37,7 @@ function createGrid(numOfSquaresPerSide) {
     }, 500);
   });
 
-  //Change color by hovering
+  //Change color
   container.addEventListener("mousemove", (e) => {
     if (e.target !== container) {
       e.target.classList.add("fired-square");
